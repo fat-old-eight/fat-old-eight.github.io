@@ -24,9 +24,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Fat Old Eight's blog
-email: tzq80820@163.com
-author: fat-old-eight
+title: "Fat Old Eight's blog"
+email: "tzq80820@163.com"
+author: "fat-old-eight"
 
 # Copyright setting
 # You can use any html code, currently below placeholders are available:
