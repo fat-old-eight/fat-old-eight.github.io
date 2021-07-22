@@ -3,7 +3,7 @@ layout: post
 title: Hello World
 subtitle: Hello World
 categories: 垃圾
-tags: [测试]
+tags: 测试 测试2
 ---
 
 # Hello World
