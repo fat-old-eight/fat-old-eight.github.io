@@ -11,11 +11,9 @@ title: 关于
 
 下面是友链：
 
-<!-- <style>
-  .table{width:543px;overflow:auto}
-</style> -->
 
 |头像|name|备注|
 |:--|:--|:--|
 |[![EarthMessenger](https://avatars.githubusercontent.com/u/49364506?v=4&s=50)](https://github.com/EarthMessenger)|[EarthMessenger](https://github.com/EarthMessenger)|就是他改了亿些小 bug|
 |[![云游君](https://avatars.githubusercontent.com/u/25154432?v=4&s=50)](https://www.yunyoujun.cn)                  |[云游君](https://www.yunyoujun.cn)                  |~~单向友链不违法吧~~%%%%|
+|[![云浅知处](https://yunqian-qwq.github.io/images/avatar.png)](https://yunqian-qwq.github.io/)                    |[云浅知处](https://yunqian-qwq.github.io/)          |单向友链一定不违法|   
