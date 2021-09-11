@@ -31,7 +31,6 @@
         'mozHidden' in document ? 'mozHidden' :
           null;
     var visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange');
-    undefined
     var onVisibilityChange = function () {
       if (!document[hiddenProperty]) {
         document.title = defaultTitle;
@@ -39,5 +38,8 @@
         document.title = defaultTitle;
       }
     };
+
+    document.addEventListener(visibilityChangeEvent, onVisibilityChange);
+
   </script>
 </head>
