@@ -80,11 +80,12 @@ $on-laptop:        800px !default;
   left: 0;
   background-color: rgba(255,255,255,0.5);
   backdrop-filter: blur(25px);
+  z-index: 100;
 }
 
 .ac-body {
   position: absolute;
-  max-width: 740px;
+  min-width: 740px;
   top: 50%;
   left: 50%;
   min-height: 788px;
