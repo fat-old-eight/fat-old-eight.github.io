@@ -84,11 +84,10 @@ $on-laptop:        800px !default;
 
 .ac-body {
   position: absolute;
-  max-width: 30%;
+  max-width: 740px;
   top: 50%;
   left: 50%;
-  width: 50%;
-  height: 81.25%;
+  min-height: 788px;
   transform: translate(-50%, -50%);
   border: none
 }
