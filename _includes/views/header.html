@@ -33,6 +33,7 @@
           </label>
 
           <div class="trigger">
+            <a class="page-link" onclick="javascript:(switchAC())">云空调</a>
             {%- for path in page_paths -%}
               {%- assign my_page = site.pages | where: "path", path | first -%}
               {%- if my_page.title -%}
