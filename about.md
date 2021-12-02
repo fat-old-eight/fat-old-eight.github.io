@@ -14,7 +14,7 @@ title: 关于
 
 |头像|name|备注|
 |:--|:--|:--|
-|[![EarthMessenger](https://avatars.githubusercontent.com/u/49364506?v=4&s=100)](https://github.com/EarthMessenger)|[EarthMessenger](https://github.com/EarthMessenger)|就是他改了亿些小 bug|
+|[![EarthMessenger](https://avatars.githubusercontent.com/u/49364506?v=4&s=100)](earthmessenger.github.io)|[EarthMessenger](earthmessenger.github.io)|就是他改了亿些小 bug|
 |[![云游君](https://avatars.githubusercontent.com/u/25154432?v=4&s=100)](https://www.yunyoujun.cn)                  |[云游君](https://www.yunyoujun.cn)                  |~~单向友链不违法吧~~%%%%|
 |[![云浅知处](https://yunqian-qwq.github.io/images/avatar.png)](https://yunqian-qwq.github.io/)                    |[云浅知处](https://yunqian-qwq.github.io/)          |单向友链一定不违法|   
 |[<img src="https://cdn.jsdelivr.net/gh/fat-old-eight/fat-old-eight.github.io@main/pic/favicon.ico" width=100xp>](https://zxt688.top/)|[Norman](https://zxt688.top/)|《论单向友联的合法性》|
