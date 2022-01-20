@@ -17,6 +17,6 @@ tags: 白嫖 实用
 [Markdown在线编辑器](https://www.zybuluo.com/mdeditor)
 
 
-[Vocaloid论坛](//bbs.ivoczloid.com)
+[Vocaloid论坛](//bbs.ivocaloid.com)
 
 
