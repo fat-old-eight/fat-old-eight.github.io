@@ -118,7 +118,7 @@ int main()
     }
 }
 ~~~
-###完整代码
+### 完整代码
 ~~~ cpp
 #include<bits/stdc++.h>
 using namespace std;
