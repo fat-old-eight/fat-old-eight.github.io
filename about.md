@@ -21,7 +21,7 @@ title: 关于
 |[![云浅知处](https://yunqian-qwq.github.io/images/avatar.png)](https://yunqian-qwq.github.io/)                    |[云浅知处](https://yunqian-qwq.github.io/)          |单向友链一定不违法|   
 |[<img src="https://cdn.jsdelivr.net/gh/fat-old-eight/fat-old-eight.github.io@main/assets/pic/favicon.ico" width=100xp>](https://zxt688.top/)|[Norman](https://zxt688.top/)|《论单向友联的合法性》|
 |[![小小小朋友](https://file.lijiaan.top/img/20201121002046.png)](https://lijiaan.top/)|[小小小朋友](https://lijiaan.top/)|我找到一个洛厨|
-|[<img src="https://blog.pai233.top/img/avatar.jpg" width=100xp>](https://blog.pai233.top/friend-links/)|[pai233](https://blog.pai233.top/friend-links/)|Phigros|
+|[<img src="https://blog.pai233.top/img/avatar.jpg" width=100xp>](https://blog.pai233.top|[pai233](https://blog.pai233.top)|Phigros|
 
 ~~我已经把单向友链玩明白了~~
 
