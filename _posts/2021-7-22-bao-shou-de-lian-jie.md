@@ -19,4 +19,6 @@ tags: 白嫖 实用
 
 [Vocaloid论坛](http://bbs.ivocaloid.com)
 
+[extend-luogu](https://exlg.cc)
+
 
