@@ -24,7 +24,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "FatOldEight's Blog"
+title: "Fat Old Eight's Blog"
 email: "tzq80820@163.com"
 author: "fat-old-eight"
 
@@ -151,7 +151,7 @@ translate_langs:
 defaults:
   home:
     heading: "Fat Old Eight's Blog"
-    subheading: "Your awesome subheading"
+    subheading: "Tip：如何提升自己的技术，根据所有大佬的建（fu）议（du）…多练"
     banner: "Your image url"
 
 # Banner default settings
