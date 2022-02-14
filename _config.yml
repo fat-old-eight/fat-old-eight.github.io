@@ -24,7 +24,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Fat Old Eight's Blog"
+title: "FatOldEight's Blog"
 email: "tzq80820@163.com"
 author: "fat-old-eight"
 
