@@ -10,7 +10,7 @@ Fill in the blanks, case-sensitive, and delete the spaces in the text yourself.
 5. XI_G
 6. _ARE_O _
 7. r_b_ish sor_ing
-8. GGODRAGE IN 15._
+8. GOODRAGE IN 15._
 9. _eaF
 
 use Markdown can have the best felling.
