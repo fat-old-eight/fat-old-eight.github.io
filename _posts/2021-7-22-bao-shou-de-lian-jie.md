@@ -21,4 +21,6 @@ tags: 白嫖 实用
 
 [extend-luogu](https://exlg.cc)
 
+[Typora图床](https://zhuanlan.zhihu.com/p/137310314?ivk_sa=1024320u)
 
+[Git Bash使用](https://blog.csdn.net/qq_36667170/article/details/79085301)
