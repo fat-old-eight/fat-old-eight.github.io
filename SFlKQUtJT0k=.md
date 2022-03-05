@@ -12,3 +12,5 @@
 7. r_b_ish sor_ing
 8. Chronos Collapse - La Campanella IN 15._
 9. _eaF
+
+Tip：你会发现这些都是关于Phigros的东西，除了第一个。
