@@ -1,3 +1,11 @@
+---
+layout: post
+title: 题解 CF665C Simple Strings 
+subtitle: 
+categories: 题解
+tags: CF 字符串 贪心
+---
+
 ### 题目描述
 
 你是一位OIer，今天教练刚讲了LCA，你看到了[CF33D Knights](https://www.luogu.com.cn/problem/CF33D)，打算做一下它。
