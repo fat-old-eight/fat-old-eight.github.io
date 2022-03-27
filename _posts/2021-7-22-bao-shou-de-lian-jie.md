@@ -29,3 +29,5 @@ tags: 白嫖 实用
 [Typora 免费版](https://fat-old-eight.github.io/typora-0-11-18.exe)
 
 [个人网盘](https://onedrive.fat-old-eight.vercel.app/zh-CN/)
+
+[免费图床](https://imgbed.yimian.xyz/)
