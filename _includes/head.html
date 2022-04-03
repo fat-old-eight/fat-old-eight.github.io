@@ -34,7 +34,10 @@
       if (!document[hiddenProperty]) {
         document.title = defaultTitle;
       } else {
-        document.title = '还没想好';
+        var x=new Date(),today=new Date();
+        x.setFullYear(today.setFullYear(),6,12);
+        if (x==today)document.title='HB to 洛天依!';
+        else document.title = '还没想好';
       }
     };
 
