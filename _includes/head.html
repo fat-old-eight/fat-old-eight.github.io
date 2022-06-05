@@ -33,9 +33,8 @@
       if (!document[hiddenProperty]) {
         document.title = defaultTitle;
       } else {
-        var x=new Date(),today=new Date();
-        x.setFullYear(today.setFullYear(),6,12);
-        if (x==today)document.title='HB to 洛天依!';
+        var x1=new Date("2022-7-12"),today=new Date(),x2=new Date("2022-7-13");
+        if (x1.getTime()<=today.getTime()&&today.getTime()<=x2.getTime())document.title='HB to 洛天依!';
         else document.title = '还没想好';
       }
     };
