@@ -31,3 +31,9 @@ tags: 白嫖 实用
 [个人网盘](https://onedrive.fat-old-eight.vercel.app/zh-CN/)
 
 [免费图床](https://imgbed.yimian.xyz/)
+
+[geogebra]geogebra.org/calculator)
+
+[没啥用的Luogu Toolbox](https://blog.earthmessenger.xyz/2022/02/09/luogu-toolbox-ad.html)
+
+
