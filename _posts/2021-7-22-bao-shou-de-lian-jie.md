@@ -32,7 +32,7 @@ tags: 白嫖 实用
 
 [免费图床](https://imgbed.yimian.xyz/)
 
-[geogebra](https:/geogebra.org/calculator)
+[geogebra](https://geogebra.org/calculator)
 
 [没啥用的Luogu Toolbox](https://blog.earthmessenger.xyz/2022/02/09/luogu-toolbox-ad.html)
 
