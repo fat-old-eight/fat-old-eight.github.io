@@ -2,7 +2,7 @@
     "posted": "Dreamer-Paul",
     "model": "model.moc",
     "textures": [
-        "https://api.yimian.xyz/img/?path=imgbed/img_8689f53_2048x2048_8_null_normal.jpeg"
+        "textures/texture_00.png"
     ],
     "layout": {
         "center_x": 0.0,
