@@ -2,7 +2,7 @@
     "posted": "Dreamer-Paul",
     "model": "model.moc",
     "textures": [
-        "https://api.yimian.xyz/img/?path=imgbed/img_8689f53_2048x2048_8_null_normal.jpeg"
+        "https://yimian-image.obs.cn-east-2.myhuaweicloud.com/imgbed/img_8689f53_2048x2048_8_null_normal.jpeg?AWSAccessKeyId=6LJRZC0YN3MQXXFOWMIH&Expires=1658230172&Signature=MnDPVaG/i2bMAd/lCGFZL/RopzY%3D"
     ],
     "layout": {
         "center_x": 0.0,
