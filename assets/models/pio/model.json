@@ -1,6 +1,6 @@
 {
     "posted": "Dreamer-Paul",
-    "model": "https://fastly.jsdelivr.net/gh/fat-old-eight/fat-old-eight.github.io@main/assets/models/pio/model.moc",
+    "model": "model.moc",
     "textures": [
         "https://fastly.jsdelivr.net/gh/fat-old-eight/fat-old-eight.github.io@main/assets/models/pio/textures/texture_00.png"
     ],
