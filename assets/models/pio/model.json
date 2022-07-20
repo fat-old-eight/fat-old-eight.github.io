@@ -2,7 +2,7 @@
     "posted": "Dreamer-Paul",
     "model": "model.moc",
     "textures": [
-        "https://fastly.jsdelivr.net/gh/fat-old-eight/fat-old-eight.github.io@main/assets/models/pio/textures/texture_00.png"
+        "https://gitee.com/fatoldeight/My_image/raw/master/texture_00.png"
     ],
     "layout": {
         "center_x": 0.0,
