@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 题解 CF665C Simple Strings 
-subtitle: 
+title: 题解 CF33D Knights
+subtitle:
 categories: 题解
-tags: CF 字符串 贪心
+tags: CF LCA 图论 树
 ---
 
 ### 题目描述
