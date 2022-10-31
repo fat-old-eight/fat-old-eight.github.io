@@ -21,6 +21,7 @@ title: 关于
 |[<img src="https://cdn.jsdelivr.net/gh/fat-old-eight/fat-old-eight.github.io@main/assets/pic/favicon.ico" width=100xp>](https://zxt688.top/)|[Norman](https://zxt688.top/)|《论单向友联的合法性》|
 |[<img src="https://lijiaan.top/usr/themes/Aria/favicon.ico" width=100xp>](https://lijiaan.top/)|[小小小朋友](https://lijiaan.top/)|我找到一个洛厨|
 |[<img src="https://blog.pai233.top/img/avatar.jpg" width=100xp>](https://blog.pai233.top)|[pai233](https://blog.pai233.top)|Phigros|
+|[<img src="http://61.186.173.89:2019/2022/10/31/d7d38546a1125.png" width=100xp>](https://www.cnblogs.com/Fran-CENSORED-Cwoi/)|[Francais_Drake](https://www.cnblogs.com/Fran-CENSORED-Cwoi/)|同机房|
 
 ~~我已经把单向友链玩明白了~~
 
