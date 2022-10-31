@@ -1,3 +1,11 @@
+---
+layout: post
+title: 2022 CSP-J/S 游寄
+subtitle: 
+categories: 游记
+tags: 杂谈
+---
+
 ## Day 0
 
 复习板子，现学KMP和gdb，愉快颓废，最后写了个大模拟。
