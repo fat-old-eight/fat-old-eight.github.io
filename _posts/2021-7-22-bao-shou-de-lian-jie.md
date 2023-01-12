@@ -31,4 +31,4 @@ tags: 白嫖 实用
 
 [geogebra](https://geogebra.org/calculator)
 
-[没啥用的Luogu Toolbox](https://blog.earthmessenger.xyz/2022/02/09/luogu-toolbox-ad.html "(作者咕了)")
+[没啥用的Luogu Toolbox](https://blog.earthmessenger.xyz/2022/06/04/luogu-toolbox-ad.html "(作者咕了)")
