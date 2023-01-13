@@ -1,5 +1,5 @@
 ---
-layout: frindlinks
+layout: friendlinks
 title: 友链
 ---
 
