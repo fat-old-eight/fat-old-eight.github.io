@@ -195,7 +195,7 @@ markdown: kramdown
 kmarkdown:
   input: GFM
 
-theme: jekyll-theme-yat
+# theme: jekyll-theme-yat
 
 plugins:
   - jekyll-feed
