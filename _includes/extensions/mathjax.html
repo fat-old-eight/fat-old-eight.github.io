@@ -1,13 +1,10 @@
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    },
-    svg: {
-      fontCache: 'global'
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      inlineMath: [['$','$']]
     }
-  };
+  });
 </script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdnjs.loli.net/ajax/libs/mathjax/3.2.1/es5/tex-mml-chtml.min.js">
-</script>
+<script
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>

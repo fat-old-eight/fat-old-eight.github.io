@@ -1,6 +1,5 @@
-source "https://rubygems.org"
-# gem "jekyll-theme-yat"
+# frozen_string_literal: true
 
-gem "github-pages", "~> 227"
-gem "webrick"
-gem "jekyll-spaceship"
+source "https://rubygems.org"
+gemspec
+
