@@ -194,13 +194,6 @@ GEM
     jekyll-theme-time-machine (0.2.0)
       jekyll (> 3.5, < 5.0)
       jekyll-seo-tag (~> 2.0)
-    jekyll-theme-yat (1.8.0)
-      jekyll (> 3.5, < 5.0)
-      jekyll-feed (~> 0.9)
-      jekyll-paginate (~> 1.1)
-      jekyll-seo-tag (~> 2.1)
-      jekyll-sitemap (~> 1.3)
-      jekyll-spaceship (~> 0.2)
     jekyll-titles-from-headings (0.5.3)
       jekyll (>= 3.3, < 5.0)
     jekyll-watch (2.2.1)
@@ -271,7 +264,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages (~> 227)
   jekyll-spaceship
-  jekyll-theme-yat
   webrick
 
 BUNDLED WITH
