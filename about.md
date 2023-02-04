@@ -22,7 +22,7 @@ title: 关于
 
 Telegram: V我50我就去注册一个。
 
-Twiiter：V我50我就去注册一个。
+[Twiiter](https://twitter.com/FatOldEight)：FatOldEight
 
 email : tzq80820@163.com
 
@@ -30,8 +30,15 @@ email : tzq80820@163.com
 
 总括一下：比较杂。
 
-1.常年泡在中文Vocaloid
-2.音游主修Phigros，Arceae
+1. 常年泡在中文Vocaloid
+2. 音游主修Phigros，较为熟练maimai和喵斯，会，仅仅是会Arceae、Cytus II、ous!、BMS、冰与火之舞、Malody。
+3. 玩蔚蓝，很菜，只有175个草莓。
+4. 闲着没事会到后室逛一圈。
+5. 雀魂就没赢过。
+6. 忘了，后面再补。
+
+#### OI
+很菜就对了。
 
 ---
 
