@@ -68,3 +68,28 @@ $on-laptop:        800px !default;
   "misc/gitment",
   "misc/click-to-top"
 ;
+
+.disabled {
+  display: none;
+}
+
+.ac {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(25px);
+  z-index: 100;
+}
+
+.ac-body {
+  position: absolute;
+  min-width: 740px;
+  top: 50%;
+  left: 50%;
+  min-height: 788px;
+  transform: translate(-50%, -50%);
+  border: none
+}
