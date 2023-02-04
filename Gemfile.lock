@@ -96,6 +96,7 @@ DEPENDENCIES
   bundler (>= 1.6, < 3.0)
   jekyll-theme-yat!
   rake (>= 12.0, < 13.0)
+  webrick (~> 1.8)
 
 BUNDLED WITH
    2.4.6
