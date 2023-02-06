@@ -1,7 +1,7 @@
 ---
 layout: post
+title: Test
 ---
-
 <p>主要用来放一些 OI 相关的笔记类的东西，随记也会放一些在这里。</p>
 <p>希望做的事情就是记录好自己学习过的算法，遇到的 Tricks。</p>
 <p>弄清楚这些 Algorithm 和 Tricks 背后本质的关系。</p>
@@ -105,4 +105,4 @@ layout: post
 <li>LHQing</li>
 </ul>
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&amp;id=26440351&amp;auto=1&amp;height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="https://music.163.com/outchain/player?type=2&id=26440351&auto=1&height=66"></iframe>
