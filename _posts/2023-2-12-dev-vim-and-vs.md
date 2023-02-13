@@ -51,4 +51,10 @@ gdb 可能有点麻烦，后面会详细讲（挖坑）。
 
 这部分由 <a style="color:#008000"  >EarthMessenger</a> 给大家讲。
 
+### 后记
+
+无。
+
+### 引用
+
 [^1]:[https://zh.wikipedia.org/zh-cn/Dev-C%2B%2B](https://zh.wikipedia.org/zh-cn/Dev-C%2B%2B)
