@@ -14,15 +14,7 @@ title: 关于
 
 #### 联系方式：
 
-[QQ](https://wpa.qq.com/msgrd?V=3&Uin=3370644978) : 3370644978
-
-[Github](https://github.com/fat-old-eight) :fat-old-eight
-
-Telegram: V我50我就去注册一个。
-
-[Twiiter](https://twitter.com/FatOldEight)：FatOldEight
-
-email : tzq80820@163.com
+见页脚。
 
 #### 成分：
 
