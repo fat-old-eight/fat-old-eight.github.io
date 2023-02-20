@@ -21,10 +21,6 @@ tags: 白嫖 实用
 
 [Git Bash使用教程](https://blog.csdn.net/qq_36667170/article/details/79085301)
 
-[VPN （付费）](https://content.517liuxue.net/preland/binom_directtest?click_id=2DPza7eXrk8&zone_id=320483652&source=Binom&app=Desktop&trafficSource=ActiveRevenue&platform=Desktop&campaign_name=Zeroclick)
-
-[Typora 免费版](https://fat-old-eight.github.io/typora-0-11-18.exe)
-
 [个人网盘(已挂)](https://onedrive.fat-old-eight.vercel.app/zh-CN/)
 
 [免费图床](https://imgbed.yimian.xyz/)

@@ -15,6 +15,8 @@ title: 友链
 | [<img src="https://api.yimian.xyz/img/?path=imgbed/img_6bbb7f2_100x100_8_null_normal.jpeg" width=100xp>](https://www.cnblogs.com/Fran-CENSORED-Cwoi/) | [Francais_Drake](https://www.cnblogs.com/Fran-CENSORED-Cwoi/) | 同或隔壁机房                                               |
 | [<img src="https://hylwxqwq.github.io/img/logo.jpg" width=100xp>](https://hylwxqwq.github.io/)                                                        | [black_trees](https://hylwxqwq.github.io/)                    | 如果你发现了这个博客，感觉还不错，那就 Ctrl + D  一下吧（ |
 | [<img src="https://xxeray.gitlab.io/images/avatar/64x64.jpg" width=100xp>](https://xxeray.gitlab.io/guestbook/links/)|[xxEray](https://xxeray.gitlab.io/guestbook/links/)|`OI 技术向博客。`|
+| [<img src="https://avatars.githubusercontent.com/u/79489964?v=4" width=100xp>](https://www.cnblogs.com/SqrtSecond)|[SqrtSecond](https://www.cnblogs.com/SqrtSecond)|One,Two,Three,FIRE!!!|
+| [<img src="https://api.yimian.xyz/img/?path=imgbed/img_685e735_48x48_8_null_normal.jpeg" width=100xp>](https://www.cnblogs.com/cwhfy)|[grass8cow](https://www.cnblogs.com/cwhfy)|我是 grass8cow ，坐标四川，男，初三。|
 
 ~~我已经把单向友链玩明白了~~
 
