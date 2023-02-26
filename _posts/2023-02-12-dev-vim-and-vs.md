@@ -6,7 +6,7 @@ tags: 实用
 ---
 ### 前言
 
-最近在[这个文章](https://hylwxqwq.github.io/blog/2023-02-03/)下面与 <a style="color:#AA00AA"  >black_trees</a> 进行了一些探讨，有感而作。
+最近在[这个文章](https://hylwxqwq.github.io/blog/2023-02-03/)下面与 <span style="color:#AA00AA"  >black_trees</span> 进行了一些探讨，有感而作。
 
 ### 编辑器和调试工具
 
@@ -48,7 +48,7 @@ gdb 可能有点麻烦，后面会详细讲（挖坑）。
 
 #### Vim
 
-这部分由 <a style="color:#008000"  >EarthMessenger</a> 给大家讲。
+这部分由 <span style="color:#008000"  >EarthMessenger</span> 给大家讲。
 
 ### 后记
 
