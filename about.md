@@ -32,6 +32,11 @@ title: 关于
 
 很菜就对了。
 
+![img](https://cfrating.baoshuo.dev/rating?username=FatOldEight)
+
+![img](https://atrating.baoshuo.dev/rating?username=fat_old_eight)
+
+
 ---
 
 本博客文章除特殊说明外，均使用CC BY-SA 4.0 和 SATA 协议，附加条款亦可能应用。
