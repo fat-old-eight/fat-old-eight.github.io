@@ -4,7 +4,7 @@ title : 题解 CF38G Queue
 categories: 题解
 tags: 数据结构 平衡树
 ---
-发现大多都是Splay的，来水一个FHQ的。
+<span class="heimu" title="你知道的太多了">总是改的习惯还没改</span>
 
 ### 做法
 
