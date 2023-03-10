@@ -1,13 +1,13 @@
 ---
 layout : post
-title : CF38G Queue 题解
+title : 题解 CF38G Queue
 categories: 题解
 tags: 数据结构 平衡树
 ---
-
 发现大多都是Splay的，来水一个FHQ的。
 
 ### 做法
+
 首先为了方便实现，我们先将整个队列反转一下，原问题就变成了在队列前 $c_i$ 个数中插入一个数（位置为 $k$），使得对于任意的 $1\leq j < k \leq c_i+1$ 都有 $a_j < a_k$。（很好理解吧。）
 
 好了现在问题就解决了，先建一个以下标为权值的FHQ。
@@ -18,7 +18,7 @@ tags: 数据结构 平衡树
 
 ### 代码
 
-~~~ cpp
+```cpp
 #include<algorithm>
 #include<iostream>
 using namespace std;
@@ -125,4 +125,4 @@ int main()
     }
     T1.print(T1.root);
 }
-~~~
+```
