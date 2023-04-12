@@ -205,6 +205,11 @@ var Paul_Pio = function (prop) {
                                 modules.render("想了解一下 %t 吗？".replace(/%t/, "“" + this.innerText + "”"));
                             }
                         }
+                        else if(t.type === "DZ"){
+                            e[j].onmouseover = function () {
+                                modules.render("芝士 %t 。".replace(/%t/, this.innerText ));
+                            }
+                        }
                         else if(t.text){
                             e[j].onmouseover = function () {
                                 modules.render(t.text);
