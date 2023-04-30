@@ -50,5 +50,37 @@
     "tips": true
 });
     </script>
+    <script>
+      
+      function myFunction()
+      {
+        var sss=document.getElementById("lock").value;
+        var a=document.getElementById("114514").innerHTML;
+        var ans=document.getElementById("ans").innerHTML;
+        var hash=CryptoJS.SHA1(sss);
+        if(hash!=a)
+        {
+          document.getElementById("1!5!").innerHTML="Wrong Answer";
+        }
+        else
+        {
+          document.getElementById("1!5!").innerHTML="Accepted";
+          document.getElementById("lock").remove();
+          document.getElementById("SB").remove();
+          var aesKey=CryptoJS.MD5(sss);
+          var key = CryptoJS.enc.Utf8.parse(aesKey);
+          aseKey=aesKey.toString();
+          const option = {
+            iv: CryptoJS.enc.Utf8.parse(aesKey.toString().substring(1, 17)),
+            mode: CryptoJS.mode.CBC,
+            padding: CryptoJS.pad.Pkcs7,
+          };
+          var decrypt = CryptoJS.AES.decrypt(ans, key, option);
+          var decryptData = JSON.parse(decrypt.toString(CryptoJS.enc.Utf8));
+          document.getElementById("stdout").innerHTML=decryptData;
+        }
+      }
+  </script>
+  
   </body>
 </html>

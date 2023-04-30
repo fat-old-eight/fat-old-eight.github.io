@@ -13,7 +13,7 @@ layout : post
 
 ### 2023-04-19
 
-- 修改友链。`<span class="heimu" title="你知道的太多了">`换头像请尽量在原文件上改
+- 修改友链。<span class="heimu" title="你知道的太多了">换头像请尽量在原文件上改</span>
 - 移除了 HIM。
 
 ### 2023-04-23
@@ -24,4 +24,9 @@ layout : post
 ### 2023-04-24
 
 - 修复Bug。
+- 移除了 HIM。
+
+### 2023-04-30
+
+- **增加了加密** <span class="heimu" title="你知道的太多了">做事还得靠自己</span>
 - 移除了 HIM。
