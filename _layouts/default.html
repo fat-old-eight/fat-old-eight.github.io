@@ -65,8 +65,10 @@
         else
         {
           document.getElementById("1!5!").innerHTML="Accepted";
-          document.getElementById("lock").remove();
           document.getElementById("SB").remove();
+          document.getElementById("ans").remove();
+          document.getElementById("lock").remove();
+          document.getElementById("114514").remove();
           var aesKey=CryptoJS.MD5(sss);
           var key = CryptoJS.enc.Utf8.parse(aesKey);
           aseKey=aesKey.toString();
