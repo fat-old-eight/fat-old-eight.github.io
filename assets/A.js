@@ -1,17 +1,7 @@
 const CryptoJS = require("crypto-js");
 
 //要加密的数据
-var data ="1<p>这里是Test，会用来测试一些奇怪的东西。</p>\
-<p><del>所以你是怎么找到这的</del></p>\
-\
-<iframe frameborder=\"no\" border=\"0\" marginwidth=\"0\" marginheight=\"0\" width=\"330\" height=\"86\" src=\"https://music.163.com/outchain/player?type=2&id=26440351&auto=1&height=66\"></iframe>\
-\
-<img src=\"https://cdn.jsdelivr.net/gh/BoringHacker/cdn/emojis/majsoul/maj-27.png\">\
-\
-<!--[喏](https://fat-old-eight.github.io/sth-int.html)-->\
-\
-<span class=\"heimu\" title=\"你知道的太多了\">你知道的太多了</span>\
-"
+var data ="<p>这里没有东西</p>"
 
 //秘钥
 var aesKey = "c4d038b4bed09fdb1471ef51ec3a32cd";
