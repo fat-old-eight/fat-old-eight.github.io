@@ -6,7 +6,7 @@ title : 中门对狙
 
 ### 树靶子
 
-就是说，在不久前，<span style="color:#00c">EarthMessenger </span>发表了几篇重要讲话：
+就是说，在不久前，<span style="color:#00f">EarthMessenger </span>发表了几篇重要讲话：
 
 [左闭右开神教](https://blog.earthmessenger.xyz/2023/02/13/left-closed-right-open.html)
 
@@ -20,7 +20,7 @@ title : 中门对狙
 
 首先我们来谈一下Vim。
 
-众所周知，Vim是一个极其常用的语言编辑器,在整个机房里只有20个人没用，而机房只有几个人用VS code。——<span style="color:#00c">EarthMessenger </span>。
+众所周知，Vim是一个极其常用的语言编辑器,在整个机房里只有20个人没用，而机房只有几个人用VS code。——<span style="color:#00f">EarthMessenger </span>。
 
 但是因为，Vim的极难上手但是又比较方便，所以这边打算下面再进行讨论。
 
@@ -50,7 +50,7 @@ title : 中门对狙
 
 但是其好处就是可以将一堆东西放在一个程序里面，从终端到代码到网页到pdf。
 
-Vim的好处是移动光标之类的比较方便，最近<span style="color:#00c">EarthMessenger </span>找了一个插件就是可以找到编译错误，我的评价是不如C/C++和Errors Lens。
+Vim的好处是移动光标之类的比较方便，最近<span style="color:#00f">EarthMessenger </span>找了一个插件就是可以找到编译错误，我的评价是不如C/C++和Errors Lens。
 
 但是如果都想要两者这么办？在Vscode里面装Vim插件就行了。~~因为没试过，所以一切责任概不负责~~
 

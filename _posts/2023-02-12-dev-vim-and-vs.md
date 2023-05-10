@@ -48,7 +48,7 @@ gdb 可能有点麻烦，后面会详细讲（挖坑）。
 
 #### Vim
 
-这部分由 <span style="color:#00c"  >EarthMessenger</span> 给大家讲。
+这部分由 <span style="color:#00f"  >EarthMessenger</span> 给大家讲。
 
 ### 后记
 
