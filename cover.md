@@ -24,5 +24,6 @@ title : 杂谈
 
 [周刊562杂谈](http://fat-old-eight.github.io/others/GUMI562.html)
 
+[（被机惨的）表白文案](http://fat-old-eight.github.io/others/foo.html)
 
 <!--杂谈之所以是杂谈因为它是随便写的-->

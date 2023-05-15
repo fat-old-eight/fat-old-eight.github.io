@@ -1,3 +1,25 @@
+---
+layout: post
+title: （被机惨的）表白文案
+subtitle: _Joanna_特供版
+---
+
+update on 2023-05-15
+
+今天在翻博客的时候无意中发现了这篇文章（对，就是你现在看的这篇），在网上查了一下，查重率100%，应该是被机惨的，想着我已经在 GitHub 上 commit 了，我就来进行艺术再加工。
+
+---
+
+一天，失恋的<span style="color:#ff0000">grass8sheep</span>托我去找<span style="color:#000">genshinmaster_Joanna_</span>学习恋爱的诀窍，于是她给了我一张纸，于是我把它交给了<span style="color:#ff0000">grass8sheep</span>。
+
+后事我就不知道了，但是听说他们关系很好。
+
+下面的就是被机惨的内容，即纸的内容，保证只改了一字。
+
+致那个男生：（原文为女）
+
+---
+
 致那个女生：
 
 只要你愿意，当你失落失意的时候，最需要一个肩膀的时候，告诉我，我会立即出现。
