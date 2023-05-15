@@ -143,7 +143,7 @@ translate_langs:
 header_pages:
   - about.md
   - friendlinks.md
-  - index.html
+  - cover.md
   - workdata.md
   - archives.html
   - categories.html

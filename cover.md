@@ -1,7 +1,6 @@
 ---
 layout : post
-title : 杂谈目录
-categories: 杂谈
+title : 杂谈
 ---
 以后的杂谈是不会放在`_post`文件夹下面了，所以你是无法从首页看到它的，而且刚刚试过，好像就算加了**tag**和**categories**也不会出现在**分类**和**标签**里面。
 
@@ -22,5 +21,8 @@ categories: 杂谈
 [推曲](http://fat-old-eight.github.io/others/GOODSONG.html)
 
 [密码](http://fat-old-eight.github.io/others/key.html)
+
+[周刊562杂谈](http://fat-old-eight.github.io/others/GUMI562.html)
+
 
 <!--杂谈之所以是杂谈因为它是随便写的-->
