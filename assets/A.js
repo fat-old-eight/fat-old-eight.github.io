@@ -30,11 +30,9 @@ const option = {
 var encrypt = CryptoJS.AES.encrypt(JSON.stringify(data), key, option);
 var encryptData = encrypt.toString();
 console.log(encryptData);
-// rgt5tbJMD7sLe/f0z3Oa843RQ+7yXXlCinVA+pxhyDY=
 
 
 //解密
 var decrypt = CryptoJS.AES.decrypt(encryptData, key, option);
 var decryptData = JSON.parse(decrypt.toString(CryptoJS.enc.Utf8)); //解密后的数据
 console.log(decryptData);
-// { name: '李雷', age: 18 }
