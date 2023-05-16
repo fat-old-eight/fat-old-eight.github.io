@@ -57,10 +57,20 @@
         var sss=document.getElementById("lock").value;
         var a=document.getElementById("114514").innerHTML;
         var ans=document.getElementById("ans").innerHTML;
+        var password=document.getElementById("password").innerHTML;
         var hash=CryptoJS.SHA1(sss);
         if(hash!=a)
         {
-          document.getElementById("1!5!").innerHTML="Wrong Answer";
+          if(sss==password)
+          {
+            document.getElementById("1!5!").innerHTML="Accepted";
+            document.getElementById("SB").remove();
+            document.getElementById("ans").remove();
+            document.getElementById("lock").remove();
+            document.getElementById("114514").remove();
+            document.getElementById("stdout").innerHTML="这里没有东西";
+          }
+          else document.getElementById("1!5!").innerHTML="Wrong Answer";
         }
         else
         {
