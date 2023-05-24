@@ -55,42 +55,60 @@
       function myFunction()
       {
         var sss=document.getElementById("lock").value;
-        var a=document.getElementById("114514").innerHTML;
-        var ans=document.getElementById("ans").innerHTML;
-        var password=document.getElementById("password").innerHTML;
         var hash=CryptoJS.SHA1(sss);
-        if(hash!=a)
+        for(var i=1;1;i++)
         {
-          if(sss==password)
+          var num="114514"+i.toString();
+          var Ans="ans"+i.toString();
+          var ans=document.getElementById(Ans).innerHTML;
+          if(ans=='End')break;
+          var a=document.getElementById(num).innerHTML;
+          var password=document.getElementById("password").innerHTML;
+          if(hash==a)
           {
             document.getElementById("1!5!").innerHTML="Accepted";
             document.getElementById("SB").remove();
-            document.getElementById("ans").remove();
             document.getElementById("lock").remove();
-            document.getElementById("114514").remove();
-            document.getElementById("stdout").innerHTML="这里没有东西";
+            for(var j=1;1;j++)
+            {
+              var num="114514"+j.toString();
+              var Ans="ans"+j.toString();
+              var an=document.getElementById(Ans).innerHTML;
+              document.getElementById(Ans).remove();
+              if(an=="End")break;
+              document.getElementById(num).remove();
+            }
+            var aesKey=CryptoJS.MD5(sss);
+            var key = CryptoJS.enc.Utf8.parse(aesKey);
+            aseKey=aesKey.toString();
+            const option = {
+              iv: CryptoJS.enc.Utf8.parse(aesKey.toString().substring(1, 17)),
+              mode: CryptoJS.mode.CBC,
+              padding: CryptoJS.pad.Pkcs7,
+            };
+            var decrypt = CryptoJS.AES.decrypt(ans, key, option);
+            var decryptData = JSON.parse(decrypt.toString(CryptoJS.enc.Utf8));
+            document.getElementById("stdout").innerHTML=decryptData;
+            return;
           }
-          else document.getElementById("1!5!").innerHTML="Wrong Answer";
         }
-        else
+        if(sss==password)
         {
           document.getElementById("1!5!").innerHTML="Accepted";
           document.getElementById("SB").remove();
-          document.getElementById("ans").remove();
           document.getElementById("lock").remove();
-          document.getElementById("114514").remove();
-          var aesKey=CryptoJS.MD5(sss);
-          var key = CryptoJS.enc.Utf8.parse(aesKey);
-          aseKey=aesKey.toString();
-          const option = {
-            iv: CryptoJS.enc.Utf8.parse(aesKey.toString().substring(1, 17)),
-            mode: CryptoJS.mode.CBC,
-            padding: CryptoJS.pad.Pkcs7,
-          };
-          var decrypt = CryptoJS.AES.decrypt(ans, key, option);
-          var decryptData = JSON.parse(decrypt.toString(CryptoJS.enc.Utf8));
-          document.getElementById("stdout").innerHTML=decryptData;
+          for(var j=1;1;j++)
+          {
+            var num="114514"+j.toString();
+            var Ans="ans"+j.toString();
+            var an=document.getElementById(Ans).innerHTML;
+            document.getElementById(Ans).remove();
+            if(an=="End")break;
+            document.getElementById(num).remove();
+          }
+          document.getElementById("stdout").innerHTML="这里没有东西";
         }
+        else document.getElementById("1!5!").innerHTML="Wrong Answer";
       }
   </script>
   
