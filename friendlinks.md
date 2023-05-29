@@ -21,6 +21,7 @@ title: 友链
 | [<img src="https://blog.10circle.moe/usr/uploads/2022/03/2844749549.jpeg" width=100xp>](https://blog.10circle.moe) | [10circle 的小站](https://blog.10circle.moe)                 |                     依铃的胡思乱想存放处                     |
 | [<img src="https://avatars.githubusercontent.com/u/41335471?v=4" width=100xp>](https://blog.immccn123.xyz) | [immccn123 ](https://blog.immccn123.xyz)                     |                     おかえり、ドクター！                     |
 | [<img src="https://avatars.githubusercontent.com/u/88923783?v=4" width=100xp>](https://h2sxxa.github.io/) | [H2Sxxa's Blog](https://h2sxxa.github.io/)                   |                       Just a developer                       |
+| [<img src="https://dsy4567.cf/img/avatar.jpg" width=100xp>](https://dsy4567.cf/) | [dsy4567 的小站](https://dsy4567.cf/)                   |                       站长很懒, 不想写网站介绍                       |
 
 ~~我已经把单向友链玩明白了~~
 
