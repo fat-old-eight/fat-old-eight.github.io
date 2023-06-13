@@ -8,11 +8,11 @@ title : 中门对狙
 
 就是说，在不久前，<span style="color:#00f">EarthMessenger </span>发表了几篇重要讲话：
 
-[左闭右开神教](https://blog.earthmessenger.xyz/2023/02/13/left-closed-right-open.html)
+[左闭右开神教](https://blog.earthmessenger.xyz/left-closed-right-open.html)
 
-[偏见](https://blog.earthmessenger.xyz/2023/01/20/my-bias.html)
+[偏见](https://blog.earthmessenger.xyz/my-bias.html)
 
-[在 vim 中编译程序](https://blog.earthmessenger.xyz/2023/02/26/compile-program-in-vim.html)
+[在 vim 中编译程序](https://blog.earthmessenger.xyz/compile-program-in-vim.html)
 
 现在，作为 hyj 哲学 的忠实批判者，现在我要好好批判一下所谓的hyj 哲学。
 
