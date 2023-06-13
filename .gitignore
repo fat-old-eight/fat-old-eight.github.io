@@ -2,7 +2,8 @@
 .bundle
 .sass-cache
 _site
-# Gemfile.lock
+Gemfile.lock
 /assets/A.js
 /assets/B.js
 114514
+test
