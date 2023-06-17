@@ -19,17 +19,17 @@ tags: 游记
 
 感觉唯一值得说一说的事就是军训的时候怕闲着没事干，于是打了点[东西](https://github.com/fat-old-eight/icpc-snippet)，因为是军训直接跟在 SCPC 后，所以是 SCPC 和军训一起准备的，有点夹带私货，计算几何板子白准备了。
 
-updata：
+update：
 
 详情看[这个](https://blog.earthmessenger.xyz/posts/military-training-tutorial-for-cw/)。
 
-updata:
+update:
 
 想起来了这个，觉得有必要一说：
 
 17:35 <span style="color:#00f">EarthMessenger</span> ：我们来玩海龟汤吧。
 
-16:35 <span style="color:#00f">EarthMessenger</span> ：啊啊啊啊啊，太吓人了，不玩了。
+18:35 <span style="color:#00f">EarthMessenger</span> ：啊啊啊啊啊，太吓人了，不玩了。
 
 ---
 
