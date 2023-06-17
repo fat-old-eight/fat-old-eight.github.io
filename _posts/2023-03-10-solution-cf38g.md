@@ -1,9 +1,12 @@
 ---
+
 layout : post
 title : 题解 CF38G Queue
 categories: 题解
 tags: 数据结构 平衡树
+
 ---
+
 <span class="heimu" title="你知道的太多了">总是改的习惯还没改</span>
 
 ### 做法
@@ -47,7 +50,7 @@ struct FHQ
     }
     void pushup(int x)
     {
-    	s(x)=s(l(x))+s(r(x))+1;
+        s(x)=s(l(x))+s(r(x))+1;
         mx(x)=max({mx(l(x)),mx(r(x)),v(x)});
         rmx(x)=max(mx(l(x)),v(x));
     }//维护前缀最大值
