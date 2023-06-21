@@ -25,7 +25,7 @@ title: 友链
 | [<img src="https://avatars.githubusercontent.com/u/41335471?v=4" width=100xp>](https://blog.immccn123.xyz)                                            | [immccn123 ](https://blog.immccn123.xyz)                      | おかえり、ドクター！                                                     |
 | [<img src="https://avatars.githubusercontent.com/u/88923783?v=4" width=100xp>](https://h2sxxa.github.io/)                                             | [H2Sxxa's Blog](https://h2sxxa.github.io/)                    | Just a developer                                               |
 | [<img src="https://dsy4567.cf/img/avatar.jpg" width=100xp>](https://dsy4567.cf/)                                                                      | [dsy4567 的小站](https://dsy4567.cf/)                            | 站长很懒, 不想写网站介绍                                                  |
-| [<img src="hhttps://blog-api.lihaoyu.cn/avatar" width=100xp>](https://lihaoyu.cn)                                                                      | [晓雨杂记](https://lihaoyu.cn)                            | 也许我们会分别，但我们将永远不会忘记彼此                                                  |
+| [<img src="https://blog-api.lihaoyu.cn/avatar" width=100xp>](https://lihaoyu.cn)                                                                      | [晓雨杂记](https://lihaoyu.cn)                            | 也许我们会分别，但我们将永远不会忘记彼此                                                  |
 
 ~~我已经把单向友链玩明白了~~
 
