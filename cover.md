@@ -26,4 +26,5 @@ title : 杂谈
 
 [（被机惨的）表白文案](http://fat-old-eight.github.io/others/foo.html)
 
+[2023-05-12](http://fat-old-eight.github.io/others/2023-05-12.html)
 <!--杂谈之所以是杂谈因为它是随便写的-->
