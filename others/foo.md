@@ -10,7 +10,7 @@ update on 2023-05-15
 
 ---
 
-一天，失恋的<span style="color:#ff0000">grass8sheep</span>托我去找<span style="color:#000">genshinmaster_Joanna_</span>学习恋爱的诀窍，于是她给了我一张纸，于是我把它交给了<span style="color:#ff0000">grass8sheep</span>。
+一天，失恋的<span style="color:red">grass8sheep</span>托我去找<span style="color:#000">genshinmaster_Joanna_</span>学习恋爱的诀窍，于是她给了我一张纸，于是我把它交给了<span style="color:red">grass8sheep</span>。
 
 后事我就不知道了，但是听说他们关系很好。
 
