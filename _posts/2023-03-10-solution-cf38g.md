@@ -1,5 +1,4 @@
 ---
-
 layout : post
 title : 题解 CF38G Queue
 categories: 题解
