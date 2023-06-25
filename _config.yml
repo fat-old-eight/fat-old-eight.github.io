@@ -45,7 +45,7 @@ copyright: "Unpublished Work (cleft) 2021 FatOldEight"
 description: >- # this means to ignore newlines until "baseurl:"
   fat-old-eight blog oi
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://fat-old-eight.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 favicon: "" # the favicon for your site
 
 # Yat date format
