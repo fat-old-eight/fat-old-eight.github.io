@@ -1,20 +1,20 @@
 {
-    "posted": "Dreamer-Paul",
-    "model": "model.moc",
+    "posted": "Dreamer-Paul"，
+    "model": "model.moc"，
     "textures": [
-        "https://jsdelivr.codeqihan.com/gh/fat-old-eight/fat-old-eight.github.io@main/assets/models/pio/textures/texture_00.png?raw=true"
-    ],
+        "https://jsd.cdn.zzko.cn/gh/fat-old-eight/fat-old-eight.github.io@main/assets/images/texture_00.png?raw=true"
+    ]，
     "layout": {
-        "center_x": 0.0,
-        "center_y": 0.0,
+        "center_x": 0.0，
+        "center_y": 0.0，
         "width": 2.0
-    },
+    }，
     "hit_areas_custom": {
-        "head_x": [-0.35, 0.6],
-        "head_y": [0.19, -0.2],
-        "body_x": [-0.3, -0.25],
-        "body_y": [0.3, -0.9]
-    },
+        "head_x": [-0.35， 0.6]，
+        "head_y": [0.19， -0.2]，
+        "body_x": [-0.3， -0.25]，
+        "body_y": [0.3， -0.9]
+    }，
     "motions": {
         "idle": [
             {"file": "motions/idle/idle.mtn"}
