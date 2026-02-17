@@ -1,0 +1,19 @@
+<div class="ac disabled" id="ac">
+    <iframe id="ac-body" class="ac-body" height="740" width="auto" src="https://ac.yunyoujun.cn"></iframe>
+</div>
+<script>
+    let showAC = false;
+    let ac = document.getElementById("ac");
+    let DISABLE_AC_CLASS = "ac disabled";
+    let ABLE_AC_CLASS = "ac";
+
+    let switchAC = () => {
+        showAC = !showAC;
+        if (showAC) {
+            ac.className = ABLE_AC_CLASS;
+        }
+        else {
+            ac.className = DISABLE_AC_CLASS;
+        }
+    };
+</script>

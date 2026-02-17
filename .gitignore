@@ -1,0 +1,9 @@
+*.gem
+.bundle
+.sass-cache
+_site
+Gemfile.lock
+/assets/A.js
+/assets/B.js
+114514
+test
