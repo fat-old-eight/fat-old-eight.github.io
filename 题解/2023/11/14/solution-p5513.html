@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>题解 P5513 [CEOI2013] Board | Fat Old Eight’s Blog</title>
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="题解 P5513 [CEOI2013] Board">
+<meta name="author" content="fat-old-eight">
+<meta property="og:locale" content="zh_CN">
+<meta name="description" content="懂不懂什么叫 $O(\frac{n^2}{\omega})$ 啊。">
+<meta property="og:description" content="懂不懂什么叫 $O(\frac{n^2}{\omega})$ 啊。">
+<link rel="canonical" href="https://fat-old-eight.github.io/%E9%A2%98%E8%A7%A3/2023/11/14/solution-p5513.html">
+<meta property="og:url" content="https://fat-old-eight.github.io/%E9%A2%98%E8%A7%A3/2023/11/14/solution-p5513.html">
+<meta property="og:site_name" content="Fat Old Eight’s Blog">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2023-11-14T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="题解 P5513 [CEOI2013] Board">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"fat-old-eight"},"dateModified":"2023-11-14T00:00:00+00:00","datePublished":"2023-11-14T00:00:00+00:00","description":"懂不懂什么叫 $O(\\frac{n^2}{\\omega})$ 啊。","headline":"题解 P5513 [CEOI2013] Board","mainEntityOfPage":{"@type":"WebPage","@id":"https://fat-old-eight.github.io/%E9%A2%98%E8%A7%A3/2023/11/14/solution-p5513.html"},"url":"https://fat-old-eight.github.io/%E9%A2%98%E8%A7%A3/2023/11/14/solution-p5513.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="https://s41.ax1x.com/2026/02/18/pZOgcFg.png">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdmirror.cn/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="https://cdn.jsdmirror.cn/gh/fat-old-eight/fat-old-eight.github.io@main/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://fat-old-eight.github.io/feed.xml" title="Fat Old Eight's Blog">
+<link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.7.0/styles/base16/3024.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.7.0/languages/cpp.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.7.0/languages/python.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.7.0/languages/python-repl.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.7.0/languages/bash.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.7.0/languages/javascript.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+<script type="text/x-mathjax-config">
+  window.MathJax = {
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    },
+    tex: {
+      inlineMath: [['$','$']]
+    }
+  };
+</script>
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> -->
+  <link href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.7.0/style.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcdn.net/ajax/libs/crypto-js/4.1.1/crypto-js.js"></script>
+  <script>
+    let defaultTitle = document.title;
+    var hiddenProperty = 'hidden' in document ? 'hidden' :
+      'webkitHidden' in document ? 'webkitHidden' :
+        'mozHidden' in document ? 'mozHidden' :
+          null;
+    var visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange');
+    var onVisibilityChange = function () {
+      if (!document[hiddenProperty]) {
+        document.title = defaultTitle;
+      } else {
+        let today=new Date();
+        const D=today.getDate(),M=today.getMonth();
+        if (M==6&&D==12)document.title='HB to 洛天依!';
+        else if (M==3&&D==12)document.title='HB to 乐正绫!';
+        else if (M==6&&D==11)document.title='HB to 言和!';
+        else if (M==9&&D==2)document.title='HB to 乐正龙牙!';
+        else if (M==11&&D==10)document.title='HB to 徵羽摩柯!';
+        else if (M==4&&D==20)document.title='HB to 墨清弦!';
+        else if (M==7&&D==12)document.title='HB to 星尘';
+        else if (M==2&&D==10)document.title='HB to 心华!';
+      }
+    };
+
+    document.addEventListener(visibilityChangeEvent, onVisibilityChange);
+
+  </script>
+
+
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"svg":{"fontCache":"global"}}</script><script src="https://cdn.jsdmirror.cn/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/">
+  <img class="site-favicon" title="Fat Old Eight's Blog" src="" onerror="this.style.display='none'">
+  Fat Old Eight's Blog
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+            <a class="page-link" href="https://www.travellings.cn">开往</a><a class="page-link" href="/about.html">关于</a><a class="page-link" href="/friendlinks.html">友链</a><a class="page-link" href="/archives.html">归档</a><a class="page-link" href="/categories.html">分类</a><a class="page-link" href="/tags.html">标签</a>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">题解 P5513 [CEOI2013] Board</h1>
+  <h2 class="post-subtitle"></h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2023-11-14T00:00:00+00:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Nov 14, 2023
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 14 mins</span>
+  </p>
+<div class="post-tags">
+<a class="post-tag" href="/tags.html#%E6%A8%A1%E6%8B%9F%E8%B5%9B">#模拟赛</a><a class="post-tag" href="/tags.html#%E9%A2%98%E8%A7%A3">#题解</a><a class="post-tag" href="/tags.html#%E9%AB%98%E7%B2%BE%E5%BA%A6">#高精度</a>
+</div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+<p>懂不懂什么叫 $O(\frac{n^2}{\omega})$ 啊。</p>
+
+<hr>
+
+<h3 id="题意">题意</h3>
+
+<p><a href="https://www.luogu.com.cn/problem/P5513">P5513 [CEOI2013] Board</a></p>
+
+<h3 id="思路">思路</h3>
+
+<p>首先给每个节点编个号，类似于线段树，设当前节点为 $x$，则左儿子为 $2x$，右儿子为 $2x+1$。</p>
+
+<p>这样我们就能用一个二进制数表示每个节点的位置。</p>
+
+<p>并且容易发现，点 $x$ 和点 $y$ 之间的最短路为：</p>
+
+<p>$$
+\min\limits_{a,b}{ (\lvert\lfloor\frac{x}{2^a}\rfloor-\lfloor\frac{y}{2^b}\rfloor\rvert+a+b)[h(\lfloor\frac{x}{2^a}\rfloor)=h(\lfloor\frac{y}{2^b}\rfloor })]
+$$</p>
+
+<p>$h(x)$ 表示 $x$ 的最高二进制位在第几位。</p>
+
+<p>很抽象？说人话就是将 $x,y$ 向上跳到同一高度后，他们的之间的差的绝对值取最小值。</p>
+
+<p>图示：</p>
+
+<p><img src="https://z1.ax1x.com/2023/11/14/piJowut.png" alt="piJowut.png"></p>
+
+<p>三条线即为 $x,y$ 之间最短路的三种可能取值。</p>
+
+<p>计算答案流程就是：</p>
+
+<p>假设 $x$ 大于 $y$。</p>
+
+<p>先将 $x$ 向上跳至和 $y$ 同一高度，然后计算 $x$ 和 $y$ 的差。</p>
+
+<p>再把 $x$ 和 $y$ 同时向上跳一个父亲。</p>
+
+<p>重复上面操作直到 $x,y$ 重合。</p>
+
+<p>关于处理 $x,y$ 位置，只需要处理几种操作分别是向哪里转移，模拟即可。</p>
+
+<p>但是还有一个问题：$x,y$ 的最大值为 $2^{10^5}$，这存不下。</p>
+
+<p>所以要使用高精度。</p>
+
+<p>但是普通的高精是 $O(n^2)$ 的，不能通过。</p>
+
+<p>于是我们可以参考一下 bitset，将多个进制位用同一个数存下即可。</p>
+
+<p>时间复杂度 $O(\frac{n^2}{\omega})$，$\omega$ 取 $60$ 即可。</p>
+
+<h3 id="code">code</h3>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span><span class="cpf">&lt;cstring&gt;</span><span class="cp">
+#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">N</span><span class="o">=</span><span class="mi">61</span><span class="p">;</span>
+<span class="k">struct</span> <span class="nc">BYDSET</span><span class="c1">//普通压位高精</span>
+<span class="p">{</span>
+    <span class="kt">long</span> <span class="kt">long</span> <span class="n">a</span><span class="p">[</span><span class="mi">2005</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">L</span><span class="p">;</span>
+    <span class="n">BYDSET</span><span class="p">(){</span><span class="n">L</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">memset</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">a</span><span class="p">));}</span>
+    <span class="kt">void</span> <span class="nf">rmove</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">L</span><span class="p">;</span><span class="o">~</span><span class="n">i</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;&lt;=</span><span class="mi">1</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&amp;</span><span class="p">(</span><span class="mi">1ll</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)))</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">|=</span><span class="mi">1</span><span class="p">,</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">^=</span><span class="p">(</span><span class="mi">1ll</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">L</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="n">L</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">void</span> <span class="nf">lmove</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">L</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">((</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="n">i</span><span class="p">)</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">|=</span><span class="p">(</span><span class="mi">1ll</span><span class="o">&lt;&lt;</span><span class="n">N</span><span class="p">);</span>
+            <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;&gt;=</span><span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">a</span><span class="p">[</span><span class="n">L</span><span class="p">]</span><span class="o">&amp;&amp;</span><span class="n">L</span><span class="p">)</span><span class="n">L</span><span class="o">--</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">void</span> <span class="nf">push</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">L</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;=</span><span class="p">(</span><span class="mi">1ll</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)))</span>
+            <span class="p">{</span>
+                <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-=</span><span class="p">(</span><span class="mi">1ll</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+                <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">L</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="n">L</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">void</span> <span class="nf">idk</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">L</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+=</span><span class="p">(</span><span class="mi">1ull</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+                <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">a</span><span class="p">[</span><span class="n">L</span><span class="p">]</span><span class="o">&amp;&amp;</span><span class="n">L</span><span class="p">)</span><span class="n">L</span><span class="o">--</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="nf">highbit</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">N</span><span class="p">;</span><span class="o">~</span><span class="n">i</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">L</span><span class="p">]</span><span class="o">&amp;</span><span class="p">(</span><span class="mi">1ull</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">))</span><span class="k">return</span> <span class="n">i</span><span class="o">+</span><span class="n">L</span><span class="o">*</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">void</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">BYDSET</span> <span class="k">const</span><span class="o">&amp;</span><span class="n">s</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">L</span><span class="o">=</span><span class="n">s</span><span class="p">.</span><span class="n">L</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">L</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">s</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="n">BYDSET</span> <span class="k">operator</span><span class="o">-</span><span class="p">(</span><span class="k">const</span> <span class="n">BYDSET</span><span class="o">&amp;</span><span class="n">s</span><span class="p">)</span><span class="k">const</span>
+    <span class="p">{</span>
+        <span class="n">BYDSET</span> <span class="n">ans</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">L</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="n">ans</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">ans</span><span class="p">.</span><span class="n">L</span><span class="o">=</span><span class="n">L</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">L</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">ans</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-=</span><span class="n">s</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">ans</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">ans</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+=</span><span class="p">(</span><span class="mi">1ll</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+                <span class="n">ans</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">ans</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="n">ans</span><span class="p">.</span><span class="n">L</span><span class="p">]</span><span class="o">&amp;&amp;</span><span class="n">ans</span><span class="p">.</span><span class="n">L</span><span class="p">)</span><span class="n">ans</span><span class="p">.</span><span class="n">L</span><span class="o">--</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">cmp</span><span class="p">(</span><span class="n">BYDSET</span> <span class="n">a</span><span class="p">,</span><span class="n">BYDSET</span> <span class="n">s</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">A</span><span class="o">=</span><span class="n">a</span><span class="p">.</span><span class="n">highbit</span><span class="p">(),</span><span class="n">S</span><span class="o">=</span><span class="n">s</span><span class="p">.</span><span class="n">highbit</span><span class="p">();</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">A</span><span class="o">!=</span><span class="n">S</span><span class="p">)</span><span class="k">return</span> <span class="n">A</span><span class="o">&gt;</span><span class="n">S</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">a</span><span class="p">.</span><span class="n">L</span><span class="p">;</span><span class="o">~</span><span class="n">i</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">s</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span><span class="n">s</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">long</span> <span class="kt">long</span> <span class="nf">ask</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">long</span> <span class="kt">long</span> <span class="n">ans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">AA</span><span class="o">=</span><span class="n">A</span><span class="p">.</span><span class="n">highbit</span><span class="p">(),</span><span class="n">BB</span><span class="o">=</span><span class="n">B</span><span class="p">.</span><span class="n">highbit</span><span class="p">();</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">AA</span><span class="o">&lt;</span><span class="n">BB</span><span class="p">)</span><span class="n">swap</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">),</span><span class="n">swap</span><span class="p">(</span><span class="n">AA</span><span class="p">,</span><span class="n">BB</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">AA</span><span class="o">&gt;</span><span class="n">BB</span><span class="p">)</span><span class="n">ans</span><span class="o">++</span><span class="p">,</span><span class="n">A</span><span class="p">.</span><span class="n">lmove</span><span class="p">(),</span><span class="n">AA</span><span class="o">--</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">o</span><span class="o">=</span><span class="n">cmp</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">o</span><span class="o">==</span><span class="mi">2</span><span class="p">)</span><span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">o</span><span class="p">)</span><span class="n">swap</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">);</span>
+    <span class="n">BYDSET</span> <span class="n">C</span><span class="o">=</span><span class="n">A</span><span class="o">-</span><span class="n">B</span><span class="p">;</span><span class="c1">//C为x与y的差值</span>
+    <span class="kt">int</span> <span class="n">CC</span><span class="o">=</span><span class="n">C</span><span class="p">.</span><span class="n">highbit</span><span class="p">();</span>
+    <span class="kt">long</span> <span class="kt">long</span> <span class="n">num</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">an</span><span class="o">=</span><span class="mf">1e10</span><span class="p">;</span>
+    <span class="n">o</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">C</span><span class="o">=</span><span class="n">A</span><span class="o">-</span><span class="n">B</span><span class="p">;</span>
+        <span class="n">CC</span><span class="o">=</span><span class="n">C</span><span class="p">.</span><span class="n">highbit</span><span class="p">();</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!~</span><span class="n">CC</span><span class="p">)</span><span class="k">break</span><span class="p">;</span>
+        <span class="n">o</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">C</span><span class="p">.</span><span class="n">L</span><span class="p">)</span><span class="n">an</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">num</span><span class="o">+</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">C</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">an</span><span class="p">);</span>
+        <span class="c1">//当C的位数大于60时是绝对不优的，不用加入贡献</span>
+        <span class="n">A</span><span class="p">.</span><span class="n">lmove</span><span class="p">();</span>
+        <span class="n">B</span><span class="p">.</span><span class="n">lmove</span><span class="p">();</span>
+        <span class="n">num</span><span class="o">+=</span><span class="mi">2</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">ans</span><span class="o">+</span><span class="n">an</span><span class="o">*</span><span class="n">o</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">char</span> <span class="n">a</span><span class="p">[</span><span class="mi">200005</span><span class="p">],</span><span class="n">b</span><span class="p">[</span><span class="mi">200005</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%s%s"</span><span class="p">,</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">n</span><span class="o">=</span><span class="n">strlen</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">m</span><span class="o">=</span><span class="n">strlen</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">A</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">B</span><span class="p">.</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="c1">//处理x最后的位置</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">'1'</span><span class="p">)</span><span class="n">A</span><span class="p">.</span><span class="n">rmove</span><span class="p">();</span>
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">'2'</span><span class="p">)</span><span class="n">A</span><span class="p">.</span><span class="n">rmove</span><span class="p">(),</span><span class="n">A</span><span class="p">.</span><span class="n">push</span><span class="p">();</span>
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">'U'</span><span class="p">)</span><span class="n">A</span><span class="p">.</span><span class="n">lmove</span><span class="p">();</span>
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">'L'</span><span class="p">)</span><span class="n">A</span><span class="p">.</span><span class="n">idk</span><span class="p">();</span>
+        <span class="k">else</span> <span class="n">A</span><span class="p">.</span><span class="n">push</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="c1">//同上</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">'1'</span><span class="p">)</span><span class="n">B</span><span class="p">.</span><span class="n">rmove</span><span class="p">();</span>
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">'2'</span><span class="p">)</span><span class="n">B</span><span class="p">.</span><span class="n">rmove</span><span class="p">(),</span><span class="n">B</span><span class="p">.</span><span class="n">push</span><span class="p">();</span>
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">'U'</span><span class="p">)</span><span class="n">B</span><span class="p">.</span><span class="n">lmove</span><span class="p">();</span>
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">'L'</span><span class="p">)</span><span class="n">B</span><span class="p">.</span><span class="n">idk</span><span class="p">();</span>
+        <span class="k">else</span> <span class="n">B</span><span class="p">.</span><span class="n">push</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%lld"</span><span class="p">,</span><span class="n">ask</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></div></div>
+</div>
+
+</article>
+<div class="post-nav">
+<a class="previous" href="/%E6%97%A5%E5%B8%B8/2023/11/06/sb.html" title="一拳打爆狗屎模擬賽">一拳打爆狗屎模擬賽</a><span></span>
+</div>
+<div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/2000/01/01/test.html" title="">Test</a></li>
+<li><a class="post-link" href="/%E9%A2%98%E8%A7%A3/2023/09/27/CF1368H2.html" title="">题解 CF1368H2 Breadboard Capacity (hard version)</a></li>
+<li><a class="post-link" href="/%E9%A2%98%E8%A7%A3/2023/03/29/solution-P3369.html" title="">题解 P3369 【模板】普通平衡树</a></li>
+<li><a class="post-link" href="/%E9%A2%98%E8%A7%A3/2023/11/14/solution-p5513.html" title="">题解 P5513 [CEOI2013] Board</a></li>
+</ul>
+    </div>
+<div class="post-comments"><script src="https://giscus.app/client.js" data-repo="fat-old-eight/the-old" data-repo-id="MDEwOlJlcG9zaXRvcnkzODYxOTI3NzQ=" data-category="Announcements" data-category-id="DIC_kwDOFwTVhs4B_u1e" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous" async>
+</script></div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>Unpublished Work <span class="copyleft">©</span> 2021 FatOldEight</div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="https://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a>
+</div>
+      <div class="md-social">
+        <a href="https://github.com/fat-old-eight" target="_blank" rel="noopener" title="Github" class="md-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512" width="25" height="25"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+        </a>
+        <a href="https://twitter.com/FatOldEight" target="_blank" rel="noopener" title="Twiiter" class="md-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" width="25" height="25"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+        </a>
+        <a href="https://t.me/FatOldEight" target="_blank" rel="noopener" title="Telegram" class="md-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512" width="25" height="25"><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"></path></svg>
+        </a>
+        <a href="https://wpa.qq.com/msgrd?V=3&Uin=3370644978" target="_blank" rel="noopener" title="QQ" class="md-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" width="25" height="25"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"></path></svg>
+        </a>
+        <a href="mailto:&lt;tzq80820@163.com&gt;" target="_blank" rel="noopener" title="E-Mail" class="md-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" width="25" height="25"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"></path></svg>
+        </a>
+      </div>
+      <a href="https://icp.gov.moe/?keyword=20232712" target="_blank">萌ICP备20232712号</a>
+    </div>
+  </div>
+</footer>
+
+  
+  </body>
+</html>
